@@ -1,0 +1,113 @@
+.menuPrincipal {
+    box-shadow: 0px 1px 4px rgba(0, 21, 41, 0.12);
+}
+
+.logo {
+    color: #F37920;
+    font-size: 20px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.text_logo {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #0098A6 !important;
+}
+
+.text_menu {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px !important;
+    color: #0098A6 !important;
+}
+
+.cx_conteudo {
+    margin-top: 90px !important;
+}
+
+.botao_adicionar {
+    background: #F37920 !important;
+    border-radius: 64px !important;
+    padding: 8px 60px !important;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.barraMenu {
+    background-color: #ffffff !important;
+    padding: 20px;
+}
+
+.cx_busca_livros {
+    max-height: 500px;
+    max-width: 600px;
+    overflow-y: scroll !important;
+}
+
+.cx_exibe_livros{    
+    max-width: 600px;
+}
+
+.lista_livros {
+    min-width: 550px;
+}
+
+.exibe_livros {
+    max-width: 650px !important;
+}
+
+.cx_grava_livro {
+    margin-top: 70px;
+}
+
+.titulo_livro {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.autor {
+    color: #0098A6 !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;    
+}
+
+.paginas {
+    color: #0098A6 !important;
+    font-weight: 400 !important;
+    font-size: 12px !important; 
+    margin-bottom: 10px !important;   
+}
+
+.dados_livro {    
+    font-weight: 400 !important;
+    font-size: 12px !important;
+}
+
+.espacoData{   
+    margin-bottom: 10px;
+}
+
+.texto_avaliacao{
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.cxResenha{
+    width: 650px !important;   
+    color: #616B6D;
+}
+
+.margTop{
+    margin-top: 20px !important;
+}
+
+.carregando{
+  height: 20px;
+}
