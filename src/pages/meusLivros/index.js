@@ -26,8 +26,10 @@ function MeusLivros() {
     }
 
     function formatData(data) {
-        let data_br = data.split('-').reverse().join('/');
-        return data_br;
+        if (data !== null) {
+            let data_br = data.split('-').reverse().join('/');
+            return data_br;
+        }
     }
 
     return (
@@ -36,41 +38,43 @@ function MeusLivros() {
                 <CircularProgress />
             </Box>
             <Card className='cx_exibe_livros' sx={{ display: ocultaCaixa }}>
-                <List>
-                    {result.map((item, i) =>
+                {result.length > 1 && (
+                    <List>
+                        {result.map((item, i) =>
 
-                        <ListItem key={item.id}>
+                            <ListItem key={item.id}>
 
-                            <Card sx={{ display: 'flex' }} className='lista_livros'>
-                                <CardMedia
-                                    component="img"
-                                    sx={{ width: 70 }}
-                                    image={item.imagem !== '' ? item.imagem : semimagem}
-                                />
-                                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                                    <CardContent sx={{ flex: '1 0 auto' }}>
-                                        <Typography component="div" variant="h6">
-                                            {item.nome}
-                                        </Typography>
-                                        <Typography variant="h7" color="text.secondary" component="div">
-                                            Autor: {item.autor}
-                                        </Typography>
+                                <Card sx={{ display: 'flex' }} className='lista_livros'>
+                                    <CardMedia
+                                        component="img"
+                                        sx={{ width: 70 }}
+                                        image={item.imagem !== '' ? item.imagem : semimagem}
+                                    />
+                                    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                                        <CardContent sx={{ flex: '1 0 auto' }}>
+                                            <Typography component="div" variant="h6">
+                                                {item.nome}
+                                            </Typography>
+                                            <Typography variant="h7" color="text.secondary" component="div">
+                                                Autor: {item.autor}
+                                            </Typography>
+                                            <Rating
+                                                name="hover-feedback"
+                                                value={item !== undefined ? item.avaliacao : 0}
+                                                readOnly="true"
+                                                emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                                            />
+                                            <Typography component="div" className='autor'>Inicio Leitura: {formatData(item.data_inicio_leitura)}</Typography>
+                                        </CardContent>
+                                    </Box>
+                                </Card>
+                            </ListItem>
 
-                                        <Rating
-                                            name="hover-feedback"
-                                            value={item.avaliacao}
-                                            readOnly="true"
-                                            emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-                                        />
-                                        <Typography component="div" className='autor'>Inicio Leitura: {formatData(item.data_inicio_leitura)}</Typography>
-                                    </CardContent>
-                                </Box>
-                            </Card>
-                        </ListItem>
+                        )}
 
-                    )}
+                    </List>
+                )}
 
-                </List>
             </Card>
         </Container >
     );
