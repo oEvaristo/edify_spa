@@ -5,6 +5,8 @@
 ## ⚒️ Stacks Utilizadas
 ##### 👉  React 18.1.0
 
+##### 👉  Material UI
+
 ## 🏁 Instalação do Projeto
 
 Segue o comando do Git para fazer o clone do projeto.
