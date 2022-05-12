@@ -15,8 +15,3 @@ Segue o comando do Git para fazer o clone do projeto.
 👉 npm install 
 
 👉 npm start
-
-
-### ✅ Front-end está hospedado também em meu servidor, segue link de acesso:
-
-#### 👉 GET https://www.oevaristo.com.br/edify_api/public/api/listalivro
