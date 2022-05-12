@@ -53,7 +53,7 @@ export const BuscaLivro = () => {
                     <List>
                         {
                             result?.map((item, i) => (
-                                <ListItem key={i} onClick={e => SelecionaLivro(item)}>
+                                <ListItem sx={{ cursor: "pointer" }} key={i} onClick={e => SelecionaLivro(item)}>
 
                                     <Card sx={{ display: 'flex' }} className='lista_livros'>
                                         <CardMedia
