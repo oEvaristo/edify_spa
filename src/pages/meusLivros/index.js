@@ -9,7 +9,7 @@ function MeusLivros() {
 
     const [result, setResult] = useState([])
     const [carregando, setCarregando] = useState('')
-    const [ocultaCaixa, setOcultaCaixa] = useState('none')
+    const [ocultaCaixa, setOcultaCaixa] = useState('none')    
 
     useEffect(() => {
         sendRequest();
@@ -61,7 +61,7 @@ function MeusLivros() {
                                         <Rating
                                             name="hover-feedback"
                                             value={item !== undefined ? item.avaliacao : 0}
-                                            readOnly="true"
+                                            readOnly={true}
                                             emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
                                         />
                                         <Typography component="div" className='autor'>Inicio Leitura: {formatData(item.data_inicio_leitura)}</Typography>
